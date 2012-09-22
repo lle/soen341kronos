@@ -17,6 +17,7 @@ namespace Kronos
         protected void btnCalculate_Click(object sender, EventArgs e)
         {
             lblResult.Text = txtValueOne.Text + " " + txtValueTwo.Text;
+            //test
         }
     }
 }

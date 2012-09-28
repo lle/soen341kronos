@@ -3,3 +3,8 @@ C:\Users\Gentai\Documents\GitHub\soen341kronos\Kronos\Kronos\bin\Kronos.pdb
 C:\Users\Gentai\Documents\GitHub\soen341kronos\Kronos\Kronos\obj\Debug\Kronos.csprojResolveAssemblyReference.cache
 C:\Users\Gentai\Documents\GitHub\soen341kronos\Kronos\Kronos\obj\Debug\Kronos.dll
 C:\Users\Gentai\Documents\GitHub\soen341kronos\Kronos\Kronos\obj\Debug\Kronos.pdb
+C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\Kronos\bin\Kronos.dll
+C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\Kronos\bin\Kronos.pdb
+C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\Kronos\obj\Debug\Kronos.csprojResolveAssemblyReference.cache
+C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\Kronos\obj\Debug\Kronos.dll
+C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\Kronos\obj\Debug\Kronos.pdb

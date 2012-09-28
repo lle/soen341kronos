@@ -7,17 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Kronos
 {
-    public partial class _default : System.Web.UI.Page
+    public partial class Site1 : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected void btnCalculate_Click(object sender, EventArgs e)
-        {
-            lblResult.Text = txtValueOne.Text + " " + txtValueTwo.Text;
-            //test
         }
     }
 }

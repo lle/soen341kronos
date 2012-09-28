@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
     <div>
         <center>
-            Team Kronos! Move out! <br />
+            Team Kronos On Fire :P			<br />
             <img src="http://www.automopedia.org/wp-content/uploads/2009/03/optimusprime.jpg" />
         </center>
 

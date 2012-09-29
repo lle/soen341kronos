@@ -41,6 +41,10 @@
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
@@ -74,6 +78,7 @@
   <ItemGroup>
     <Compile Include="CLASSES\BaseCourse.cs" />
     <Compile Include="CLASSES\globalvariables.cs" />
+    <Compile Include="CLASSES\WebScraper.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

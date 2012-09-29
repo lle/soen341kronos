@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Data.Linq;
 using System.Configuration;
+using Kronos.CLASSES;
 
 namespace Kronos
 {
@@ -17,6 +18,8 @@ namespace Kronos
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+
             #region ON_START
             
             Label1.Visible = false;
@@ -73,6 +76,7 @@ namespace Kronos
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+          
             #region LOGIN
 
             soen341dBEntities soen341dB_context = new soen341dBEntities();

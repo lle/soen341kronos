@@ -2,14 +2,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display.">
-        <Columns>
-            <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" SortExpression="Id" />
-            <asp:BoundField DataField="Username" HeaderText="Username" SortExpression="Username" />
-            <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
-            <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
-        </Columns>
-    </asp:GridView>
     -&gt; USERS CURRENTLY REGISTERED SHOWING<br />
     New User? Register!<p>
         username<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>

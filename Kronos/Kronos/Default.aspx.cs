@@ -6,39 +6,61 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
+using System.Data.Linq;
+using System.Configuration;
+
 namespace Kronos
 {
     public partial class Default : System.Web.UI.Page
     {
-
+  
 
         protected void Page_Load(object sender, EventArgs e)
         {
             #region ON_START
+            
             Label1.Visible = false;
             Label2.Visible = false;
             #endregion
+            
+            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            //registering using linq
+            #region REGISTER USING LINQ
+            soen341dBEntities soen341dB_context = new soen341dBEntities();
+            registration newuser = new registration();
+            newuser.Username = TextBox1.Text;
+            newuser.Password = TextBox2.Text;
+            newuser.email = TextBox3.Text;
+            soen341dB_context.registrations.Add(newuser);
+            soen341dB_context.SaveChanges();
+            #endregion
+            
+            
+            //registering using sql
+
             #region REGISTER LOGIC
             //registers user, dont enter your real password you use, you can see the value in the table it doesn't put it as asterisks
-       
- SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["soen341dBConnectionString1"].ConnectionString);
-           //start a connection
+      /*
 
+ SqlConnection myConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["soen341dBConnectionString1"].ConnectionString);
+           //start a connection
+       
             string sql = "INSERT INTO registration (Username, Password, email) VALUES "
                         + " (@Username,@Password,@email)";
             //inserting in table
-
+           
+            
             try
             {
                 
                 myConnection.Open();
                 SqlCommand cmd = new SqlCommand(sql, myConnection);
                 LinkedList<SqlParameter> parameters = new LinkedList<SqlParameter>();
-
+               
 
                 parameters.AddLast(new SqlParameter("@Username", SqlDbType.VarChar, 50));
                 parameters.AddLast(new SqlParameter("@Password", SqlDbType.VarChar, 50));
@@ -70,13 +92,14 @@ namespace Kronos
                // Response.Redirect("LoggedIn.aspx");
             }
 
-
+            */
             #endregion
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
             #region LOGIN LOGIC
+         /*
             Label2.Visible = true;
             int result;
             SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["soen341dBConnectionString1"].ConnectionString);
@@ -110,7 +133,7 @@ namespace Kronos
             myConnection.Close();
 
             }
-
+            */
             #endregion
         }
     }

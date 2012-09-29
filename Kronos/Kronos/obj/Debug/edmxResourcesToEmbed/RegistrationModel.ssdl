@@ -1,14 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="soen341dBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="soen341dBModelStoreContainer">
-    <EntitySet Name="registration" EntityType="soen341dBModel.Store.registration" store:Type="Tables" store:Schema="soen341user" store:Name="registration">
-      <DefiningQuery>SELECT 
-      [registration].[Id] AS [Id], 
-      [registration].[Username] AS [Username], 
-      [registration].[Password] AS [Password], 
-      [registration].[email] AS [email]
-      FROM [soen341user].[registration] AS [registration]</DefiningQuery>
-    </EntitySet>
+    <EntitySet Name="registration" EntityType="soen341dBModel.Store.registration" store:Type="Tables" Schema="soen341user" />
   </EntityContainer>
   <!--Errors Found During Generation:
       warning 6002: The table/view 'soen341dB.soen341user.registration' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.

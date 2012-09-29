@@ -5,10 +5,12 @@
     -&gt; USERS CURRENTLY REGISTERED SHOWING<br />
     New User? Register!<p>
         username<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:soen341dBConnectionString1 %>" ProviderName="<%$ ConnectionStrings:soen341dBConnectionString1.ProviderName %>" SelectCommand="SELECT [Id], [Username], [Password], [email] FROM [registration]"></asp:SqlDataSource>
 &nbsp;</p>
     <p>
-        password<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        password<asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
+    </p>
+    <p>
+        re-enter password<asp:TextBox ID="TextBox6" runat="server" TextMode="Password"></asp:TextBox>
     </p>
     <p>
         email address<asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>

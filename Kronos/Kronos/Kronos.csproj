@@ -86,24 +86,24 @@
     <Compile Include="LoggedIn.aspx.designer.cs">
       <DependentUpon>LoggedIn.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="registration.cs">
+      <DependentUpon>RegistrationModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model1.cs">
+    <Compile Include="RegistrationModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>RegistrationModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegistrationModel.tt</DependentUpon>
     </Compile>
     <Compile Include="RegistrationModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RegistrationModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="registration.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
@@ -115,24 +115,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site1.Master" />
+    <Content Include="packages.config" />
     <EntityDeploy Include="RegistrationModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>RegistrationModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Model1.Context.tt">
+    <Content Include="RegistrationModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>RegistrationModel.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <LastGenOutput>RegistrationModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="RegistrationModel.edmx.diagram">
       <DependentUpon>RegistrationModel.edmx</DependentUpon>
     </Content>
-    <Content Include="Model1.tt">
+    <Content Include="RegistrationModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>RegistrationModel.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
+      <LastGenOutput>RegistrationModel.cs</LastGenOutput>
     </Content>
-    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

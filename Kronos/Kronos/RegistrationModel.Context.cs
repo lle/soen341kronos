@@ -16,7 +16,7 @@ namespace Kronos
     public partial class soen341dBEntities : DbContext
     {
         public soen341dBEntities()
-            : base("soen341dBEntities")
+            : base("name=soen341dBEntities")
         {
         }
     

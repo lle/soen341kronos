@@ -10,7 +10,7 @@
 namespace Kronos {
     
     
-    public partial class Default {
+    public partial class Register {
         
         /// <summary>
         /// username_textbox control.
@@ -22,30 +22,48 @@ namespace Kronos {
         protected global::System.Web.UI.WebControls.TextBox username_textbox;
         
         /// <summary>
-        /// password_textbox control.
+        /// password_textbox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox password_textbox;
+        protected global::System.Web.UI.WebControls.TextBox password_textbox1;
         
         /// <summary>
-        /// login_button control.
+        /// password_text2box control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button login_button;
+        protected global::System.Web.UI.WebControls.TextBox password_text2box;
         
         /// <summary>
-        /// login_label control.
+        /// email_textbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label login_label;
+        protected global::System.Web.UI.WebControls.TextBox email_textbox;
+        
+        /// <summary>
+        /// register_button control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button register_button;
+        
+        /// <summary>
+        /// register_label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label register_label;
     }
 }

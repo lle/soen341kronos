@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="soen341dBEntities-Web.config Connection String" description="soen341dBEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/RegistrationModel.csdl|res://*/RegistrationModel.ssdl|res://*/RegistrationModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=108.175.158.161;initial catalog=soen341dB;persist security info=True;user id=soen341user;password=softwareprocess;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ahmadsebak\\Documents\\GitHub\\soen341kronos\\Kronos\\Kronos\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='soen341dBEntities']/@connectionString" />
+  </parameter>
+</parameters>

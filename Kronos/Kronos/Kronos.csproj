@@ -70,6 +70,7 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="LoggedIn.aspx" />
+    <Content Include="Register.aspx" />
     <Content Include="Style\Style.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -94,6 +95,13 @@
       <DependentUpon>LoggedIn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="registration.cs">
       <DependentUpon>RegistrationModel.tt</DependentUpon>
     </Compile>

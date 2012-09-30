@@ -11,5 +11,6 @@ namespace Kronos.CLASSES
         public enum day { monday, tuesday, wednsday, thursday, friday };
         public enum course_tag { CIVI, SOEN, ELEC, COEN, COMP, BLDG, INDU };
 
+
     }
 }

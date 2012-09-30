@@ -140,6 +140,7 @@
       <DependentUpon>RegistrationModel.edmx</DependentUpon>
       <LastGenOutput>RegistrationModel.cs</LastGenOutput>
     </Content>
+    <None Include="Properties\PublishProfiles\341.atsebak.com - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

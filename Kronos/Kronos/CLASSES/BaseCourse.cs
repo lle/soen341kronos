@@ -13,7 +13,7 @@ namespace Kronos.CLASSES
     {
         private float classtime;
         private LinkedList<globalvariables.day> thedaysofweek;
-        public virtual BaseCourse(globalvariables.day[] the_days_it_has, float  total_course_time)//virtual constructor
+        /*public virtual BaseCourse(globalvariables.day[] the_days_it_has, float  total_course_time)//virtual constructor
         {
             thedaysofweek=new LinkedList<globalvariables.day>();
             
@@ -26,7 +26,7 @@ namespace Kronos.CLASSES
 
         protected virtual float get_set_class_time { get { return classtime; } set { value = classtime; } }
         private virtual LinkedList<globalvariables.day> get_set_linkedlist_courses { get { return thedaysofweek; } set { value = thedaysofweek; } }
-
+        */
 
     }
 }

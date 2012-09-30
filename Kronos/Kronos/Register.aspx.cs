@@ -30,21 +30,26 @@ namespace Kronos
                 register_label.Visible = true;
                 register_label.Text = "Passwords do not match";
             }
+            else if(password_text2box.Text=="" || password_textbox1.Text=="")
+            {
+                register_label.Visible = true;
+                register_label.Text = "Don't leave passwords blank stupid";
+            }
             else
             {
                 soen341dBEntities soen341dB_context = new soen341dBEntities();
                 registration newuser = new registration();
 
-                var username_in_dB = from a_username in soen341dB_context.registrations
-                                     where a_username.Username == username_textbox.Text
-                                     select a_username;
+                var username_in_dB = (from a_username in soen341dB_context.registrations
+                                      where a_username.Username == username_textbox.Text
+                                      select a_username).FirstOrDefault();
 
-                var email_in_dB = from an_email in soen341dB_context.registrations
+                var email_in_dB = (from an_email in soen341dB_context.registrations
                                   where an_email.email == email_textbox.Text
-                                  select an_email;
+                                  select an_email).FirstOrDefault();
 
                 if (email_in_dB != null) { register_label.Text = "Email already registered"; register_label.Visible = true; }
-                else if (username_in_dB != null) { register_label.Text = "Username already Exists"; register_label.Visible = true; }
+                if (username_in_dB != null) { register_label.Text = "Username already Exists"; register_label.Visible = true; }
 
                 //this if statement is not being called for some reason
                 if (email_in_dB == null && username_in_dB == null)
@@ -63,7 +68,9 @@ namespace Kronos
                     }
                     finally
                     {
-                        //send an email to the user that they registered
+                        register_label.Visible = true;
+                        register_label.Text = "Thank You for registering, You should have recieved an email";
+                        //send an email to the user that they registered logic
                     }
 
                 }

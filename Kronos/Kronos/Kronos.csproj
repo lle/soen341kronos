@@ -45,7 +45,15 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\HtmlAgilityPack.dll</HintPath>
     </Reference>
+    <Reference Include="LinqToExcel, Version=1.6.3.0, Culture=neutral, PublicKeyToken=9c8ea65a58f03f1f, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\LinqToExcel.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Remotion.Data.Linq, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Remotion.Data.Linq.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
@@ -161,6 +169,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
+    <Folder Include="transcripts\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

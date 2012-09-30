@@ -33,22 +33,29 @@ namespace Kronos
         {
           
             #region LOGIN
-
-            soen341dBEntities soen341dB_context = new soen341dBEntities();
-            registration newuser = new registration();
-            string username = username_textbox.Text;
-            string password = password_textbox.Text;
-
-            var retrieved_user = from person in soen341dB_context.registrations
-                                 where person.Password == password
-                                 where person.Username == username
-                                 select person;
-
-            if (retrieved_user == null) { login_label.Text = "Account Information Incorrect"; }
+            if (username_textbox.Text == "" || password_textbox.Text == "")
+            {
+                login_label.Visible = true;
+                login_label.Text = "No Data entered";
+            }
             else
             {
+                soen341dBEntities soen341dB_context = new soen341dBEntities();
+                registration newuser = new registration();
+                string username = username_textbox.Text;
+                string password = password_textbox.Text;
 
-                Response.Redirect("LoggedIn.aspx?Username="+ username);
+                var retrieved_user = (from person in soen341dB_context.registrations
+                                      where person.Password == password
+                                      where person.Username == username
+                                      select person).FirstOrDefault();
+
+                if (retrieved_user == null) { login_label.Text = "Account Information Incorrect"; login_label.Visible = true; }
+                else
+                {
+                    login_label.Text = "Login Validated";
+                    Response.Redirect("LoggedIn.aspx?Username=" + username);
+                }
             }
             #endregion
 

@@ -12,3 +12,5 @@ C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\Kronos\bin\EntityFrame
 C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\Kronos\bin\EntityFramework.xml
 C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\Kronos\bin\HtmlAgilityPack.pdb
 C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\Kronos\bin\HtmlAgilityPack.xml
+C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\Kronos\bin\log4net.dll
+C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\Kronos\bin\LinqToExcel.xml

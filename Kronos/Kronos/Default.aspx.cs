@@ -44,20 +44,34 @@ namespace Kronos
                 registration newuser = new registration();
                 string username = username_textbox.Text;
                 string password = password_textbox.Text;
-
-                var retrieved_user = (from person in soen341dB_context.registrations
-                                      where person.Password == password
-                                      where person.Username == username
-                                      select person).FirstOrDefault();
-
-                if (retrieved_user == null) { login_label.Text = "Account Information Incorrect"; login_label.Visible = true; }
-                else
+                try
                 {
-                    login_label.Text = "Login Validated";
-                    Response.Redirect("LoggedIn.aspx?Username=" + username);
+                    var retrieved_user = (from person in soen341dB_context.registrations
+                                          where person.Password == password
+                                          where person.Username == username
+                                          select person).FirstOrDefault();
+
+
+                    if (retrieved_user == null) { login_label.Text = "Account Information Incorrect"; login_label.Visible = true; }
+                    else
+                    {
+                        login_label.Text = "Login Validated";
+                        Response.Redirect("LoggedIn.aspx?Username=" + Encoder_BASE64(username));
+                    }
                 }
+                catch (Exception error)
+                {
+                    throw new Exception(error.ToString());
+                }
+
             }
             #endregion
+
+        }
+        public static string Encoder_BASE64(string toEncode)
+        {
+            byte[] toEncodeAsBytes = System.Text.Encoding.Unicode.GetBytes(toEncode);
+           return System.Convert.ToBase64String(toEncodeAsBytes);
 
         }
     }

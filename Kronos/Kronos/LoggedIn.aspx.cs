@@ -16,8 +16,8 @@ namespace Kronos
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.QueryString["Username"] != null) { Username_logged_in = Request.QueryString["Username"]; }
-            
+            if (Request.QueryString["Username"] != null) { Username_logged_in = Decode_BASE64(Request.QueryString["Username"]); }
+
         }
 
         protected void UploadButton_Click(object sender, EventArgs e)
@@ -46,6 +46,12 @@ namespace Kronos
                     StatusLabel.Text = "Upload status: The file could not be uploaded. The following error occured: " + ex.Message;
                 }
             }
+        }
+
+        public static string Decode_BASE64(string encodedData)
+        {
+            byte[] encodedDataAsBytes = System.Convert.FromBase64String(encodedData);
+            return System.Text.Encoding.Unicode.GetString(encodedDataAsBytes);
         }
 
 

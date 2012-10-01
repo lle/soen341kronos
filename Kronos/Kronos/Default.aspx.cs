@@ -49,7 +49,7 @@ namespace Kronos
                 //dB table constructor
                 registration newuser = new registration();
                 string username = username_textbox.Text;
-                string password = password_textbox.Text;
+                string password = globalvariables.EncodePassword(password_textbox.Text);
                 try
                 {
                     //get the retrived_user

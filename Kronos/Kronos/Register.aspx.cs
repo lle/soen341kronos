@@ -58,7 +58,7 @@ namespace Kronos
                     try
                     {
                         newuser.Username = username_textbox.Text;
-                        newuser.Password = password_textbox1.Text;
+                        newuser.Password = globalvariables.EncodePassword(password_textbox1.Text);
                         newuser.email = email_textbox.Text;
                         soen341dB_context.registrations.Add(newuser);
                         soen341dB_context.SaveChanges();

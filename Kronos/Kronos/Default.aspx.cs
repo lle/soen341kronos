@@ -21,7 +21,7 @@ namespace Kronos
 
 
             #region ON_START
-
+            //Don't show text on the main page
             login_label.Visible = false;
             #endregion
             
@@ -33,35 +33,47 @@ namespace Kronos
         {
           
             #region LOGIN
-            if (username_textbox.Text == "" || password_textbox.Text == "")
+            //conditions for entered data
+            if (username_textbox.Text == "" && password_textbox.Text == "")
             {
                 login_label.Visible = true;
                 login_label.Text = "No Data entered";
             }
+            else if (username_textbox.Text == "") { login_label.Visible = true; login_label.Text = "No Username Entered"; }
+            else if (password_textbox.Text == "") { login_label.Visible = true; login_label.Text = "No Password Entered"; }
+
             else
             {
+                //start a Model Entity Object
                 soen341dBEntities soen341dB_context = new soen341dBEntities();
+                //dB table constructor
                 registration newuser = new registration();
                 string username = username_textbox.Text;
                 string password = password_textbox.Text;
                 try
                 {
+                    //get the retrived_user
                     var retrieved_user = (from person in soen341dB_context.registrations
                                           where person.Password == password
                                           where person.Username == username
                                           select person).FirstOrDefault();
 
-
+                    //check to see if a record of it exists
                     if (retrieved_user == null) { login_label.Text = "Account Information Incorrect"; login_label.Visible = true; }
                     else
                     {
+                        
+                        login_label.Visible = true;
                         login_label.Text = "Login Validated";
+                        //encrypt url so people cannot change it to get other people's data; 
+                        //Query the username to another page by using question mark variable name =
                         Response.Redirect("LoggedIn.aspx?Username=" + Encoder_BASE64(username));
                     }
                 }
                 catch (Exception error)
                 {
-                    throw new Exception(error.ToString());
+                    login_label.Visible=true;
+                    login_label.Text = "Database Exception Occured :" + error.ToString();
                 }
 
             }

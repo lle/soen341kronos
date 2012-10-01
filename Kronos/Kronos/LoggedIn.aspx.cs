@@ -5,7 +5,6 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Kronos.CLASSES;
-using System.Threading;
 using System.IO;
 using LinqToExcel;
 namespace Kronos
@@ -16,23 +15,25 @@ namespace Kronos
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //make sure nobody changes url to enter in
+            if (Request.QueryString["Username"] == null || Request.QueryString["Username"]=="") { Response.Redirect("Default.aspx"); }
+            //decrypt url and store it in a string
             if (Request.QueryString["Username"] != null) { Username_logged_in = Decode_BASE64(Request.QueryString["Username"]); }
 
         }
 
         protected void UploadButton_Click(object sender, EventArgs e)
         {
-            //upload transcript you save it from my concordia as an excel document
+            //upload transcript you save it from my concordia as an excel document, is what I am thinking 
             if (FileUploadControl.HasFile)
             {
                 try
                 {
-                    if (FileUploadControl.PostedFile.ContentType == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+                    if (FileUploadControl.PostedFile.ContentType == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")//this means it has to be excel file type
                     {
-                        if (FileUploadControl.PostedFile.ContentLength < 102400)
+                        if (FileUploadControl.PostedFile.ContentLength < 102400)//less the 100kbs
                         {
-                           // string filename = Path.GetFileName(FileUploadControl.FileName);
-                            FileUploadControl.SaveAs(Server.MapPath("/transcripts/") + Username_logged_in +".xlsx");
+                            FileUploadControl.SaveAs(Server.MapPath("/transcripts/") + Username_logged_in +".xlsx"); //save it in transcripts folder
                             StatusLabel.Text = "Upload status: File uploaded!";
                         }
                         else
@@ -43,9 +44,12 @@ namespace Kronos
                 }
                 catch (Exception ex)
                 {
-                    StatusLabel.Text = "Upload status: The file could not be uploaded. The following error occured: " + ex.Message;
+                    StatusLabel.Text = "Upload status: Exception Occured  " + ex.Message;
                 }
             }
+
+           //after file was uploaded, extract the data for courses and the gpa/or the pass fail status
+            //a function should be called here to do that
         }
 
         public static string Decode_BASE64(string encodedData)

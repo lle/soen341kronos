@@ -10,7 +10,7 @@ using System.Data.Linq;
 using System.Configuration;
 using Kronos.CLASSES;
 using System.Net.Mail;
-using System.Web.Mail;
+using System.Net;
 namespace Kronos
 {
     public partial class Register : System.Web.UI.Page
@@ -24,12 +24,13 @@ namespace Kronos
         {
             
             #region REGISTER
-
+            //check passwords match
             if (password_textbox1.Text != password_text2box.Text)
             {
                 register_label.Visible = true;
                 register_label.Text = "Passwords do not match";
             }
+                //check its not empty the password
             else if(password_text2box.Text=="" || password_textbox1.Text=="")
             {
                 register_label.Visible = true;
@@ -39,7 +40,7 @@ namespace Kronos
             {
                 soen341dBEntities soen341dB_context = new soen341dBEntities();
                 registration newuser = new registration();
-
+                //checking if either the user or email is already registered
                 var username_in_dB = (from a_username in soen341dB_context.registrations
                                       where a_username.Username == username_textbox.Text
                                       select a_username).FirstOrDefault();
@@ -51,7 +52,7 @@ namespace Kronos
                 if (email_in_dB != null) { register_label.Text = "Email already registered"; register_label.Visible = true; }
                 if (username_in_dB != null) { register_label.Text = "Username already Exists"; register_label.Visible = true; }
 
-                //this if statement is not being called for some reason
+                //if it doesnt retrieve records make a new record
                 if (email_in_dB == null && username_in_dB == null)
                 {
                     try
@@ -64,13 +65,28 @@ namespace Kronos
                     }
                     catch (Exception error)
                     {
-                        throw new Exception(error.ToString());
+                        register_label.Visible=true;
+                        register_label.Text = "Database Exception Occured: " + error.ToString();
                     }
                     finally
                     {
                         register_label.Visible = true;
-                        register_label.Text = "Thank You for registering, You should have recieved an email";
-                        //send an email to the user that they registered logic
+                        register_label.Text = "Thank You for registering, You should have recieved an email from us!";
+               
+                            MailMessage mail = new MailMessage();
+                            mail.To.Add(email_textbox.Text);
+                            mail.From = new MailAddress("admin@341.atsebak.com");
+                            mail.Subject = "mYScheduler Registration Confirmation";
+                            mail.Body = "Thank You for registering to the Concordia University mYScheduler. Your username is: " + username_textbox.Text +" Please report bugs and suggestions to admin@341.atsebak.com";
+                            mail.IsBodyHtml = true;
+                            SmtpClient smtp = new SmtpClient();
+                            smtp.Host = "mail.atsebak.com";
+                            smtp.Port = 587;
+                            smtp.UseDefaultCredentials = true;
+                            smtp.Credentials = new NetworkCredential("admin@341.atsebak.com", "softwareprocess");
+                            smtp.EnableSsl = false;
+                            smtp.Send(mail);
+
                     }
 
                 }

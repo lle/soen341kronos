@@ -36,7 +36,7 @@ namespace Kronos
                     {
                         if (FileUploadControl.PostedFile.ContentLength < 102400)//less the 100kbs
                         {
-                            FileUploadControl.SaveAs(Server.MapPath("/transcripts/") + Username_logged_in +".xlsx"); //save it in transcripts folder
+                            FileUploadControl.SaveAs(Server.MapPath("/transcripts/") + Username_logged_in +".xlxs"); //save it in transcripts folder
                             StatusLabel.Text = "Upload status: File uploaded!";
                         }
                         else
@@ -50,9 +50,14 @@ namespace Kronos
                     StatusLabel.Text = "Upload status: Exception Occured  " + ex.Message;
                 }
             }
-
-            ExcelDataExtract TheSpreadsheet = new ExcelDataExtract(Username_logged_in);
-           
+            try
+            {
+                ExcelDataExtract TheSpreadsheet = new ExcelDataExtract(Username_logged_in);
+            }
+            catch (Exception error)
+            {
+                throw new Exception(error.ToString());
+            }
         }
 
         public static string Decode_BASE64(string encodedData)

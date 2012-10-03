@@ -5,6 +5,8 @@ using System.Web;
 using LinqToExcel;
 using System.Web.UI;
 using System.IO;
+using LinqToSqlShared;
+using Remotion.Data.Linq;
 namespace Kronos.CLASSES
 {
     public class StudentsTranscript
@@ -20,6 +22,7 @@ namespace Kronos.CLASSES
         public ExcelDataExtract(string username)
         {
          var transcript_sheet=new ExcelQueryFactory();
+         //transcript_sheet.DatabaseEngine;
          transcript_sheet.FileName=Server.MapPath("/transcripts/" + username);
          transcript_sheet.AddMapping<StudentsTranscript>(x => x.Course, "Course");
          transcript_sheet.AddMapping<StudentsTranscript>(x => x.Status, "Grade");
@@ -29,8 +32,10 @@ namespace Kronos.CLASSES
 
             //test to see if it works
 
-          StreamWriter documentWrite = new StreamWriter("C:\\transcriptresults.txt");
-          documentWrite.WriteLine(StudentsTranscript);
+
+          foreach (var t in StudentsTranscript)
+              System.Diagnostics.Debug.WriteLine(t.Course);
+
 
         }
         //an excel file needs to have two records for the student record; the first column is the course; second column is either the grade or pass fail status

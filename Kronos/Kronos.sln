@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Web
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kronos", "Kronos\Kronos.csproj", "{E4D8A8AC-8A75-40C3-992E-22455F199C0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTableDesign", "TimeTableDesign\TimeTableDesign.csproj", "{6F336F65-991E-4954-BE43-568BF94AB700}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{E4D8A8AC-8A75-40C3-992E-22455F199C0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4D8A8AC-8A75-40C3-992E-22455F199C0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4D8A8AC-8A75-40C3-992E-22455F199C0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F336F65-991E-4954-BE43-568BF94AB700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F336F65-991E-4954-BE43-568BF94AB700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F336F65-991E-4954-BE43-568BF94AB700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F336F65-991E-4954-BE43-568BF94AB700}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

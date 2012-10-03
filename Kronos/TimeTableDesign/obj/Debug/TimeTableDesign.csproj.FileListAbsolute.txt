@@ -1,0 +1,11 @@
+C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\TimeTableDesign\Bin\Debug\TimeTableDesign.dll
+C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\TimeTableDesign\Bin\Debug\TimeTableDesign.pdb
+C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\TimeTableDesign\Bin\Debug\AppManifest.xaml
+C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\TimeTableDesign\Bin\Debug\TimeTableDesign.xap
+C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\TimeTableDesign\Bin\Debug\TimeTableDesignTestPage.html
+C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\TimeTableDesign\obj\Debug\App.g.cs
+C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\TimeTableDesign\obj\Debug\MainPage.g.cs
+C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\TimeTableDesign\obj\Debug\TimeTableDesign.g.resources
+C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\TimeTableDesign\obj\Debug\TimeTableDesign.dll
+C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\TimeTableDesign\obj\Debug\TimeTableDesign.pdb
+C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\TimeTableDesign\obj\Debug\XapCacheFile.xml

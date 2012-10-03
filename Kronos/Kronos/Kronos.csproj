@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <SilverlightApplicationList>{6F336F65-991E-4954-BE43-568BF94AB700}|..\TimeTableDesign\TimeTableDesign.csproj|ClientBin|False</SilverlightApplicationList>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -76,10 +77,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClientBin\TimeTableDesign.xap" />
     <Content Include="Default.aspx" />
     <Content Include="LoggedIn.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="Silverlight.js" />
     <Content Include="Style\Style.css" />
+    <Content Include="TimeTableDesignTestPage.aspx" />
+    <Content Include="TimeTableDesignTestPage.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

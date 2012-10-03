@@ -51,8 +51,8 @@ namespace Kronos
                 }
             }
 
-           //after file was uploaded, extract the data for courses and the gpa/or the pass fail status
-            //a function should be called here to do that
+            ExcelDataExtract TheSpreadsheet = new ExcelDataExtract(Username_logged_in);
+           
         }
 
         public static string Decode_BASE64(string encodedData)

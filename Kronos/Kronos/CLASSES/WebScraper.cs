@@ -14,50 +14,43 @@ namespace Kronos.CLASSES
         private HtmlNodeCollection tables;
         private HtmlNodeCollection rows;
         private HtmlNodeCollection cols;
-        //protected IQueryable get_processed_data { get { return processed_data(); } }
-        public WebScraper(string input_url)
-        {
+        private string course_code;
+        private string semester_code;
+        private string coursenumber_code;
 
-            web = new HtmlWeb();
-            doc = web.Load(input_url);
-          //  processed_data();
+        public WebScraper(string coursetag, string coursenumber, string semesternumber)
+        {
+            course_code = coursetag;
+            coursenumber_code = coursenumber;
+            semester_code = semesternumber;
         }
 
-
- /*       private IQueryable  processed_data()
+        public void process_course()
         {
-            
-        try
-        {
+            string url = "http://fcms.concordia.ca/fcms/asc002_stud_all.aspx?yrsess=2012"
+                + semester_code + "&course=" + course_code + "&courno=" + coursenumber_code + "%20&campus=&type=U";
+            web = new HtmlWeb();
+            doc = web.Load(url);
+           
 
-            tables = doc.DocumentNode.SelectNodes("//table");
-            rows = tables[0].SelectNodes(".//tr");
-            
-            for (int i = 0; i < rows.Count; ++i)
+            try
             {
+                //check this logic out, get the table ID and then process data from the rows and columns of the table.
+                var GetTableID = doc.GetElementbyId("ctl00_PageBody_tblBodyShow1").Descendants("tr").Select(x => x.Elements("td").Select(y => y.InnerText).ToArray());
+                System.Diagnostics.Debug.WriteLine(GetTableID);
 
-                // Iterate all columns in this row
-                HtmlNodeCollection cols = rows[i].SelectNodes(".//td");
-                for (int j = 0; j < cols.Count; ++j)
-                {
-                    string value =cols[j].InnerHtml;
-                }
+            }
+            catch (Exception error)
+            {
+                throw new Exception(error.ToString());
             }
 
-        }
-        catch (Exception error)
-        {
-
-            Console.WriteLine(error.ToString());
-
-        }
+       
 
 
-        return values;
+
 
         }
-
-        */
 
     }
 }

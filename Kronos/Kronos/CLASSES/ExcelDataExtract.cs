@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using LinqToExcel;
 using System.Web.UI;
+using System.IO;
 namespace Kronos.CLASSES
 {
     public class StudentsTranscript
@@ -24,6 +25,13 @@ namespace Kronos.CLASSES
          transcript_sheet.AddMapping<StudentsTranscript>(x => x.Status, "Grade");
         var StudentsTranscript = from x in transcript_sheet.Worksheet<StudentsTranscript>() select x;
           returned_transcript=StudentsTranscript;
+
+
+            //test to see if it works
+
+          StreamWriter documentWrite = new StreamWriter("C:\\transcriptresults.txt");
+          documentWrite.WriteLine(StudentsTranscript);
+
         }
         //an excel file needs to have two records for the student record; the first column is the course; second column is either the grade or pass fail status
         public IQueryable processed_transcript()

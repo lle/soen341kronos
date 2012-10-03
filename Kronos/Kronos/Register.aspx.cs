@@ -36,6 +36,7 @@ namespace Kronos
                 register_label.Visible = true;
                 register_label.Text = "Don't leave passwords blank stupid";
             }
+           
             else
             {
                 soen341dBEntities soen341dB_context = new soen341dBEntities();
@@ -48,9 +49,14 @@ namespace Kronos
                 var email_in_dB = (from an_email in soen341dB_context.registrations
                                   where an_email.email == email_textbox.Text
                                   select an_email).FirstOrDefault();
+               var studentid_in_dB = (from a_student_id in soen341dB_context.registrations
+                                       where a_student_id.StudentId == studentid_textbox.Text
+                                       select a_student_id).FirstOrDefault();
+               
 
                 if (email_in_dB != null) { register_label.Text = "Email already registered"; register_label.Visible = true; }
                 if (username_in_dB != null) { register_label.Text = "Username already Exists"; register_label.Visible = true; }
+                if (studentid_in_dB != null) { register_label.Text = "Student ID Already taken"; register_label.Visible = true; }
 
                 //if it doesnt retrieve records make a new record
                 if (email_in_dB == null && username_in_dB == null)
@@ -60,6 +66,7 @@ namespace Kronos
                         newuser.Username = username_textbox.Text;
                         newuser.Password = globalvariables.EncodePassword(password_textbox1.Text);
                         newuser.email = email_textbox.Text;
+                        newuser.StudentId = studentid_textbox.Text;
                         soen341dB_context.registrations.Add(newuser);
                         soen341dB_context.SaveChanges();
                     }

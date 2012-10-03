@@ -15,10 +15,13 @@ namespace Kronos
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             //make sure nobody changes url to enter in
             if (Request.QueryString["Username"] == null || Request.QueryString["Username"]=="") { Response.Redirect("Default.aspx"); }
             //decrypt url and store it in a string
             if (Request.QueryString["Username"] != null) { Username_logged_in = Decode_BASE64(Request.QueryString["Username"]); }
+
+            globalvariables.user_logged = Username_logged_in;
 
         }
 

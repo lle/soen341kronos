@@ -14,6 +14,9 @@
     <p>
         email address<asp:TextBox ID="email_textbox" runat="server"></asp:TextBox>
     </p>
+<p>
+        Student ID Number:<asp:TextBox ID="studentid_textbox" runat="server"></asp:TextBox>
+    </p>
     <p>
         <asp:Button ID="register_button" runat="server" OnClick="Button1_Click" Text="Register" />
     </p>

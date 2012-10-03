@@ -4,6 +4,7 @@
     <EntitySetMapping Name="registrations">
       <EntityTypeMapping TypeName="soen341dBModel.registration">
         <MappingFragment StoreEntitySet="registration">
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Username" ColumnName="Username" />
           <ScalarProperty Name="Password" ColumnName="Password" />

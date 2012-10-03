@@ -11,5 +11,6 @@
     <Property Name="Username" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
     <Property Name="Password" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
     <Property Name="email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Type="String" Name="StudentId" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>

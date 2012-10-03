@@ -14,19 +14,19 @@ namespace Kronos.CLASSES
         private HtmlNodeCollection tables;
         private HtmlNodeCollection rows;
         private HtmlNodeCollection cols;
-        protected LinkedList<string> get_processed_data { get { return processed_data(); } }
+        //protected IQueryable get_processed_data { get { return processed_data(); } }
         public WebScraper(string input_url)
         {
 
             web = new HtmlWeb();
             doc = web.Load(input_url);
-            processed_data();
+          //  processed_data();
         }
 
 
-        private LinkedList<string> processed_data()
+ /*       private IQueryable  processed_data()
         {
-            LinkedList<string> values = new LinkedList<string>();
+            
         try
         {
 
@@ -40,7 +40,7 @@ namespace Kronos.CLASSES
                 HtmlNodeCollection cols = rows[i].SelectNodes(".//td");
                 for (int j = 0; j < cols.Count; ++j)
                 {
-                    values.AddLast(cols[j].InnerHtml);
+                    string value =cols[j].InnerHtml;
                 }
             }
 
@@ -57,7 +57,7 @@ namespace Kronos.CLASSES
 
         }
 
-
+        */
 
     }
 }

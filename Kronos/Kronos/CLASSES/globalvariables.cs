@@ -9,9 +9,11 @@ namespace Kronos.CLASSES
 {
     public static class globalvariables
     {
+        public static string user_logged;
         public enum semester { fall, winter, summer, fallwinter };
         public enum day { monday, tuesday, wednsday, thursday, friday };
         public enum course_tag { CIVI, SOEN, ELEC, COEN, COMP, BLDG, INDU };
+        
 
         public static string EncodePassword(string originalPassword)
         {

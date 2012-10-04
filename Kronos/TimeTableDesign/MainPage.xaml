@@ -15,11 +15,14 @@
         <CheckBox x:Name="Fall_checkbox" Content="Fall" HorizontalAlignment="Left" Margin="972,52,-314,0" VerticalAlignment="Top" Width="100" Checked="Fall_checkbox_Checked_1" Unchecked="Fall_checkbox_Unchecked"/>
         <CheckBox x:Name="Winter_checkbox" Content="Winter" HorizontalAlignment="Left" Margin="972,84,-314,0" VerticalAlignment="Top" Width="100" Checked="Winter_checkbox_Checked" Unchecked="Winter_checkbox_Unchecked"/>
         <CheckBox x:Name="Summer_checkbox" Content="Summer" HorizontalAlignment="Left" Margin="972,118,-314,0" VerticalAlignment="Top" Width="100" Checked="Summer_checkbox_Checked" Unchecked="Summer_checkbox_Unchecked"/>
-        <sdk:AutoCompleteBox x:Name="Course_textbox" Height="28" Margin="423,-42,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="285"/>
+        
+        <sdk:AutoCompleteBox  x:Name="Course_textbox" Height="28" Margin="423,-42,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="285" Style="{StaticResource AutoCompleteBoxStyle}"/>
+        
         <Button x:Name="Course_entered" Content="Enter Course" HorizontalAlignment="Left" Margin="728,-40,-58,0" VerticalAlignment="Top" Width="88" Click="Course_entered_Click_1"/>
         <TextBlock HorizontalAlignment="Left" Margin="510,-63,0,0" TextWrapping="Wrap" Text="Enter Course i.e COEN 352" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="242,-56,0,0" TextWrapping="Wrap" Text="View Other Schedules" VerticalAlignment="Top"/>
         <Button x:Name="save_button" Content="" HorizontalAlignment="Left" Margin="893,-42,-186,0" VerticalAlignment="Top" Width="51" Height="30" RenderTransformOrigin="1.549,0.433" Foreground="Black" Click="save_button_Click"/>
         <data:DataPager x:Name="generated_schedule_page" HorizontalAlignment="Left" Height="26" Margin="163,-40,0,0" PageSize="10" VerticalAlignment="Top" Width="200"/>
+        <Button x:Name="generate_schedule_button" Content="Generate Schedules" HorizontalAlignment="Left" Margin="972,187,-334,0" VerticalAlignment="Top" Width="120" Height="30"/>
     </Grid>
 </UserControl>

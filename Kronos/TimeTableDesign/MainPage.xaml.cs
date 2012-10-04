@@ -12,7 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using System.IO;
-
+using System.Windows.Controls.Primitives;
 
 namespace TimeTableDesign
 {
@@ -171,7 +171,8 @@ namespace TimeTableDesign
 
         private void Course_entered_Click_1(object sender, RoutedEventArgs e)
         {
-
+            Popup popup = new Popup();
+           
         }
 
         #endregion

@@ -9,6 +9,7 @@ namespace Kronos.CLASSES
 {
     public class WebScraper
     {
+        #region Variables
         private HtmlWeb web;
         private HtmlDocument doc;
         private HtmlNodeCollection tables;
@@ -18,13 +19,18 @@ namespace Kronos.CLASSES
         private string semester_code;
         private string coursenumber_code;
 
+        #endregion
+
+        #region Constructor
         public WebScraper(string coursetag, string coursenumber, string semesternumber)
         {
             course_code = coursetag;
             coursenumber_code = coursenumber;
             semester_code = semesternumber;
         }
+        #endregion
 
+        #region ParseData
         public void process_course()
         {
             string url = "http://fcms.concordia.ca/fcms/asc002_stud_all.aspx?yrsess=2012"
@@ -45,12 +51,9 @@ namespace Kronos.CLASSES
                 throw new Exception(error.ToString());
             }
 
-       
-
-
-
 
         }
+        #endregion
 
     }
 }

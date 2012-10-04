@@ -80,11 +80,13 @@ namespace Kronos
             #endregion
 
         }
+         #region Encode64
         public static string Encoder_BASE64(string toEncode)
         {
             byte[] toEncodeAsBytes = System.Text.Encoding.Unicode.GetBytes(toEncode);
            return System.Convert.ToBase64String(toEncodeAsBytes);
 
         }
+        #endregion
     }
 }

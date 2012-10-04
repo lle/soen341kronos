@@ -1,8 +1,10 @@
-﻿<xapCache source="C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\TimeTableDesign\Bin\Debug\TimeTableDesign.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="03/10/2012 10:13:22 PM">
-  <file source="C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\TimeTableDesign\obj\Debug\TimeTableDesign.dll" archivePath="TimeTableDesign.dll" lastWriteTime="03/10/2012 10:13:21 PM" />
+﻿<xapCache source="C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\TimeTableDesign\Bin\Debug\TimeTableDesign.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="04/10/2012 2:30:33 AM">
+  <file source="C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\TimeTableDesign\obj\Debug\TimeTableDesign.dll" archivePath="TimeTableDesign.dll" lastWriteTime="04/10/2012 2:30:32 AM" />
   <file source="C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.ComponentModel.DataAnnotations.dll" archivePath="System.ComponentModel.DataAnnotations.dll" lastWriteTime="18/11/2011 4:40:20 PM" />
   <file source="C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.Data.dll" archivePath="System.Windows.Controls.Data.dll" lastWriteTime="18/11/2011 4:40:20 PM" />
   <file source="C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.Data.Input.dll" archivePath="System.Windows.Controls.Data.Input.dll" lastWriteTime="18/11/2011 4:40:20 PM" />
+  <file source="C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.dll" archivePath="System.Windows.Controls.dll" lastWriteTime="18/11/2011 4:40:20 PM" />
+  <file source="C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.Input.dll" archivePath="System.Windows.Controls.Input.dll" lastWriteTime="18/11/2011 4:40:20 PM" />
   <file source="C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Data.dll" archivePath="System.Windows.Data.dll" lastWriteTime="18/11/2011 4:40:20 PM" />
-  <file source="C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\TimeTableDesign\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="03/10/2012 6:22:57 PM" />
+  <file source="C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\TimeTableDesign\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="04/10/2012 2:12:11 AM" />
 </xapCache>

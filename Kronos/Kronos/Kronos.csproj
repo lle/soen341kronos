@@ -77,7 +77,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ClientBin\TimeTableDesign.xap" />
+    <Content Include="ClientBin\TimeTableDesign.xap">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Default.aspx" />
     <Content Include="LoggedIn.aspx" />
     <Content Include="Register.aspx" />

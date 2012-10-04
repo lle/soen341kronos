@@ -9,3 +9,4 @@ C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\Kronos\obj\Release\Kro
 C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\Kronos\obj\Release\Kronos.pdb
 C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\Kronos\bin\log4net.dll
 C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\Kronos\bin\LinqToExcel.xml
+C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\Kronos\bin\ClientBin\TimeTableDesign.xap

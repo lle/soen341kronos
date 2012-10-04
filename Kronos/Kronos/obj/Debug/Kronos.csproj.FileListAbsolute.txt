@@ -14,3 +14,4 @@ C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\Kronos\bin\HtmlAgility
 C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\Kronos\bin\HtmlAgilityPack.xml
 C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\Kronos\bin\log4net.dll
 C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\Kronos\bin\LinqToExcel.xml
+C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\Kronos\bin\ClientBin\TimeTableDesign.xap

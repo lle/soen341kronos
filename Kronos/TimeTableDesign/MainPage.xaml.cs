@@ -29,8 +29,11 @@ namespace TimeTableDesign
 
         public MainPage()
         {
+           
             InitializeComponent();
             InitializeTheTable();
+            IntializeTheComboBox();
+           
             //Setting up Times required
             TimeSpan start_time = TimeSpan.Parse("8:45");
             TimeSpan interval_time = TimeSpan.Parse("00:15");
@@ -65,6 +68,54 @@ namespace TimeTableDesign
            * */
       
         }
+        public void IntializeTheComboBox()
+        {
+
+            ParamterList.Items.Add("Most Days Off");
+            ParamterList.Items.Add("Evening Classes");
+            ParamterList.Items.Add("Morning Classes");
+
+        }
+
+        #region CheckBoxSemestersLogic
+        private void Fall_checkbox_Checked_1(object sender, RoutedEventArgs e)
+        {
+            Winter_checkbox.IsEnabled = false;
+            Summer_checkbox.IsEnabled = false;
+        }
+
+        private void Fall_checkbox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Winter_checkbox.IsEnabled = true;
+            Summer_checkbox.IsEnabled = true;
+        }
+
+        private void Winter_checkbox_Checked(object sender, RoutedEventArgs e)
+        {
+            Fall_checkbox.IsEnabled = false;
+            Summer_checkbox.IsEnabled = false;
+        }
+        private void Winter_checkbox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Fall_checkbox.IsEnabled = true;
+            Summer_checkbox.IsEnabled = true;
+        }
+
+        private void Summer_checkbox_Checked(object sender, RoutedEventArgs e)
+        {
+            Fall_checkbox.IsEnabled = false;
+            Winter_checkbox.IsEnabled = false;
+        }
+
+        private void Summer_checkbox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Fall_checkbox.IsEnabled = true;
+            Winter_checkbox.IsEnabled = true;
+        }
+
+
+        #endregion
+
     }
 
 

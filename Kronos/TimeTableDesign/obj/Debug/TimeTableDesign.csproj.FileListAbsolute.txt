@@ -146,3 +146,4 @@ C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\TimeTableDesign\Bin\De
 C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\TimeTableDesign\Bin\Debug\ru\System.Windows.Data.resources.dll
 C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\TimeTableDesign\Bin\Debug\zh-Hans\System.Windows.Data.resources.dll
 C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\TimeTableDesign\Bin\Debug\zh-Hant\System.Windows.Data.resources.dll
+C:\Users\ahmadsebak\Documents\GitHub\soen341kronos\Kronos\TimeTableDesign\obj\Debug\TimeTableDesign.csprojResolveAssemblyReference.cache

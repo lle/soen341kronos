@@ -10,7 +10,7 @@
     d:DesignHeight="300" d:DesignWidth="400">
 
     <Grid x:Name="LayoutRoot" Background="White" Margin="38,70,-396,-262" RenderTransformOrigin="0.599,0.467">
-        <sdk:DataGrid ColumnWidth="6*" x:Name="TimeTable" HorizontalAlignment="Left" Height="492" VerticalAlignment="Top" Width="632" Margin="126,0,0,0"/>
+        <sdk:DataGrid Style="{StaticResource DataGridStyle}" ColumnHeaderStyle="{StaticResource DataGridHeaderGlassEffect}" GridLinesVisibility="All" ColumnWidth="6*" x:Name="TimeTable" HorizontalAlignment="Left" Height="492" VerticalAlignment="Top" Width="632" Margin="126,0,0,0"/>
 
     </Grid>
 </UserControl>

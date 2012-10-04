@@ -42,20 +42,27 @@ namespace TimeTableDesign
 
             for (int i = 0; i < 100; i++)
             {
+         
                 if (start_time == TimeSpan.Parse("20:15"))
                     break;
                 start_time = start_time.Add(interval_time);
                 time = Convert.ToString(start_time);
                 students_schedule.Add(new ScheduleData() { Time = time });
+               
             }
 
             TimeTable.ItemsSource = students_schedule;
         }
         public void InitializeTheTable()
         {
+
             TimeTable.CanUserSortColumns = false;
             TimeTable.IsReadOnly = true;
             TimeTable.CanUserResizeColumns = false;
+            TimeTable.CanUserReorderColumns = false;
+          /*  Stylize the Table through the style page located at /Style/TimeTableStyle.xaml
+           * */
+      
         }
     }
 

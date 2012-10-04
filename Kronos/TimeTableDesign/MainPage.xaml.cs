@@ -31,7 +31,7 @@ namespace TimeTableDesign
         {
             InitializeComponent();
             InitializeTheTable();
-
+            //Setting up Times required
             TimeSpan start_time = TimeSpan.Parse("8:45");
             TimeSpan interval_time = TimeSpan.Parse("00:15");
             TimeSpan temp_timespan = TimeSpan.Parse("0:00");
@@ -39,6 +39,8 @@ namespace TimeTableDesign
             string time;
             string intial_time = Convert.ToString(start_time);
             students_schedule.Add(new ScheduleData() { Time = intial_time });
+
+            //Lists all the time intervals
 
             for (int i = 0; i < 100; i++)
             {
@@ -55,7 +57,6 @@ namespace TimeTableDesign
         }
         public void InitializeTheTable()
         {
-
             TimeTable.CanUserSortColumns = false;
             TimeTable.IsReadOnly = true;
             TimeTable.CanUserResizeColumns = false;

@@ -50,7 +50,8 @@ namespace Kronos
                     StatusLabel.Text = "Upload status: Exception Occured  " + ex.Message;
                 }
             }
-            try
+            
+            /*try
             {
                 ExcelDataExtract TheSpreadsheet = new ExcelDataExtract(Username_logged_in);
             }
@@ -58,6 +59,7 @@ namespace Kronos
             {
                 throw new Exception(error.ToString());
             }
+             * */
         }
 
         public static string Decode_BASE64(string encodedData)

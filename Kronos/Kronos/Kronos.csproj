@@ -81,6 +81,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Default.aspx" />
+    <Content Include="Images\save.png" />
     <Content Include="LoggedIn.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Silverlight.js" />
@@ -178,7 +179,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\" />
     <Folder Include="transcripts\" />
   </ItemGroup>
   <PropertyGroup>
